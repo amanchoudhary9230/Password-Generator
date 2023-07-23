@@ -185,11 +185,15 @@ input[type=checkbox]:checked+.custom-check:before {
         bottom: 22.5rem;
         font-size: 2rem;
     }
+
+    [checkboxes] {
+        width: 75%;
+    }
 }
 
 @media screen and (max-width: 406px) {
     :root {
-        font-size: 55%;
+        font-size: 60%;
     }
 
     [checkboxes] {
@@ -199,17 +203,36 @@ input[type=checkbox]:checked+.custom-check:before {
     [passwordOutputSection] {
         margin: 0 2rem;
     }
+
+    .password-card {
+        height: 50rem;
+    }
+
+    [slider] {
+        width: 70%;
+        right: 1rem;
+    }
+
+    [generateButton] {
+        bottom: 19rem;
+        font-size: 2rem;
+    }
+
+    [passwordStrength]{
+        position: absolute;
+        top: 4rem;
+        right: 18rem;
+    }
 }
 
 @media screen and (max-height: 610px) {
-    body{
+    body {
         height: 50rem;
     }
 }
 
-@media screen and (max-width: 300px) {
-    [passwordInput]{
-        width: 18rem;
+@media screen and (max-width: 350px) {
+    :root{
+        font-size: 50%;
     }
 }
-
