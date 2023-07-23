@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/assets/index-c08ee925.css">
+  </head>
+  <body class=" overflow-hidden">
+    <!-- MAIN TAG HOLDS CONTENT IN BODY -->
+    <main
+      id="main"
+      class="bg-color1 relative w-full h-full flex justify-center items-center font-lucidaBright flex-wrap"
+    >
+      <!-- NAVIGATION BAR -->
+      <nav
+        class="absolute top-0 w-full h-[6%] text-2xl text-color4 px-10 shadow-boxShadow82 flex items-center pt-3"
+      >
+        <div class="select-none">
+          <span class="text-4xl font-rockwell">P</span>assword
+          <span class="text-4xl font-rockwell ml-2">G</span>enerator
+        </div>
+      </nav>
+      <!-- PASSWORD GENERATOR CARD -->
+      <div
+        class="password-card relative flex justify-evenly items-center flex-col rounded-t-full rounded-b-full w-[65rem] mx-10 border-t-2 border-color4 h-[30rem] shadow-boxShadow82"
+      >
+        <!-- PASSWORD, COPY AND STRENGTH SECTION -->
+        <section passwordOutputSection class="flex mb-6">
+          <div
+            class="flex bg-color1 rounded-md text-color4 px-4 shadow-boxShadow88"
+          >
+            <input
+              passwordInput
+              class="placeholder:italic placeholder:text-color4 block bg-transparantColor w-[22rem] py-2 focus:outline-none text-xl tracking-wider"
+              type="text"
+              readonly
+              name="password-holder"
+              id="password-holder"
+              placeholder="PASSWORD"
+            />
+            <button passwordCopyButton>
+              <span
+                id="text-copied"
+                class="absolute top-2 text-sm right-[18.7rem] origin-bottom transition-transform duration-150 scale-0 ease-in-out"
+                >Copied</span
+              >
+              <i class="fa-solid fa-copy text-xl"></i><span></span>
+            </button>
+          </div>
+          <div
+            passwordStrength
+            class="relative top-1 ml-4 h-8 w-8 rounded-full blueLight"
+          ></div>
+        </section>
+        <!-- PASSWORD RANGE SLIDER SECTION -->
+        <section slider
+          class="w-[37%] bg-color1 flex justify-evenly py-2 relative right-[3.2rem] items-center rounded-md text-color4 shadow-boxShadow88"
+        >
+          <div
+            class="range-tracker-number absolute w-9 h-9 -top-7 border rounded-l-full rounded-r-lg rounded-t-full rotate-[45deg] shadow-boxShadow1 bg-color1 origin-bottom-right scale-0 transition-transform duration-100 ease-out"
+          ></div>
+          <div>1</div>
+          <input
+            data-range-slider
+            class="appearance-none bg-color4 rounded-full w-[75%] h-1 border-none outline-none"
+            type="range"
+            min="1"
+            max="25"
+            name="password-lenght-slider"
+            id="password-lenght-slider"
+            step="1"
+            value="8"
+          />
+          <div>25</div>
+        </section>
+        <!-- CHECKBOX SECTION -->
+        <section checkboxes class="w-[55%]">
+          <div class="bg-color1 w-full pl-4 rounded-md my-1 py-2 text-color4">
+            <input
+              type="checkbox"
+              name="number-password"
+              id="number-password"
+              checked
+            />
+            <label
+              class="ml-3 custom-check font-md tracking-widest"
+              for="number-password"
+              >Include Numbers</label
+            >
+          </div>
+          <div class="bg-color1 w-full pl-4 rounded-md my-1 py-2 text-color4">
+            <input
+              type="checkbox"
+              name="uppercase-password"
+              id="uppercase-password"
+            />
+            <label
+              class="ml-3 custom-check font-md tracking-widest"
+              for="uppercase-password"
+              >Include Uppercase Letters</label
+            >
+          </div>
+          <div class="bg-color1 w-full pl-4 rounded-md my-1 py-2 text-color4">
+            <input
+              type="checkbox"
+              name="lowercase-password"
+              id="lowercase-password"
+            />
+            <label
+              class="ml-3 custom-check font-md tracking-widest"
+              for="lowercase-password"
+              >Include Lowercase Letters</label
+            >
+          </div>
+          <div class="bg-color1 w-full pl-4 rounded-md my-1 py-2 text-color4">
+            <input
+              type="checkbox"
+              name="symbol-password"
+              id="symbol-password"
+            />
+            <label
+              class="ml-3 custom-check font-md tracking-widest"
+              for="symbol-password"
+              >Include Symbols</label
+            >
+          </div>
+        </section>
+        <!-- PASSWORD GENERATOR BUTTON -->
+        <button
+          generateButton
+          class="absolute right-[10rem] bottom-[6rem] bg-color1 text-5xl p-4 rounded-full shadow-boxShadow88 text-color4"
+        >
+          <i
+            rotateArrow
+            class="fa-solid fa-arrow-rotate-left transition-transform duration-300 ease-linear"
+          ></i>
+        </button>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
